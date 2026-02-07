@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ doc?.title }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">x</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<div class="modal-body" *ngIf="doc">
+  <div class="modal-image-section">
+    <img [src]="doc.image" [alt]="doc.title" class="modal-image">
+  </div>
+  <div class="modal-content">
+    <div class="modal-details">
+      <p class="modal-price">{{ doc.price | number:'1.2-2' }} $</p>
+      <ion-button shape="round" href="https://www.amazon.ca" target="_blank" rel="noopener">Acheter</ion-button>
+      <p class="modal-description">{{ doc.description }}</p>
+    </div>
+  </div>
+</div>

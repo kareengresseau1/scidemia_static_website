@@ -1,3 +1,45 @@
+/* Side menu styles - must be here for app-level ion-menu */
+ion-menu {
+  --background: #06132c;
+}
+
+ion-menu ion-content {
+  --background: #06132c;
+}
+
+.custom-toolbar-side-menu {
+  --background: #06132c;
+}
+
+.sidenav {
+  height: 100%;
+  background-color: #06132c;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 14px 8px 14px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #dbe4ee;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f17300;
+}
+
+@media screen and (max-width: 600px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+    padding: 18px 8px 18px 32px;
+  }
+}
+
 .main {
   display: flex;
   justify-content: center;

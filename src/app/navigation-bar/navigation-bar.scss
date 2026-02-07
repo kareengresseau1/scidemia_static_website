@@ -1,0 +1,287 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Garamond, serif;
+  background-color: #dbe4ee;
+  overflow-y: scroll;
+}
+
+/* Allow clicks to pass through to content below - only toolbar/logo capture clicks */
+.nav-bar-wrapper {
+  pointer-events: none;
+}
+.nav-bar-wrapper ion-header,
+.nav-bar-wrapper ion-toolbar,
+.nav-bar-wrapper ion-buttons,
+.nav-bar-wrapper ion-menu-button,
+[slot="start"],
+[slot="start"] a,
+[slot="start"] img {
+  pointer-events: auto;
+}
+
+.custom-toolbar-side-menu {
+  --background: #06132c;
+}
+
+.custom-toolbar-top {
+  --background: #dbe4ee;
+  --color: #06132c;
+}
+
+.ion-padding {
+  --background: #06132c;
+}
+
+.sidenav {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #06132c;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav.open {
+  width: 500px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #dbe4ee;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f17300;
+}
+
+.icon-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding: 1vh;
+  background: white;
+  z-index: 1000;
+}
+
+.icon {
+  color: #06132c;
+  margin-right: 1vh;
+}
+
+@media screen and (max-width: 600px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  display: block;
+  color: #06132c;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: #06132c;
+  transition: width 0.4s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link:not(:hover)::after {
+  width: 0;
+}
+
+#bouton_connexion {
+  background-color: #06132c;
+  border-color: #06132c;
+  color: #dbe4ee;
+  outline: none;
+}
+
+#bouton_connexion:hover {
+  background-color: #dbe4ee;
+  border-color: #06132c;
+  color: #06132c;
+}
+
+#div_bouton_connexion {
+  padding-top: 10px;
+  padding-left: 20px;
+  outline: none;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav_top {
+    padding-top: 15px;
+  }
+  .sidenav_top a {
+    font-size: 18px;
+  }
+}
+
+.open-btn-top {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+
+
+ion-searchbar {
+  --background: #FFFFFF;
+  --color: #F17300;
+  --border-radius: 25px;
+  --box-shadow: none;
+  --icon-color: #f17300;
+  --padding-start: 20px;
+}
+
+@media screen and (min-width: 601px){
+  .ion_searchbar{
+    display: block;
+    padding-left: 65%;
+    margin-top: 0.20vh;
+  }
+  .searchbar_small_screens{
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 600px){
+  .ion_searchbar{
+    display: none;
+  }
+  .searchbar_small_screens{
+    display: block;
+  }
+}
+
+.sidenav_top {
+  height: 175px; /* Hauteur de la barre de recherche */
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: -250px; /* Déplacez le div hors de l'écran initialement */
+  left: 0;
+  background-color: #06132c;
+  overflow-x: hidden;
+  transition: transform 0.5s ease-in-out; /* Transition fluide */
+  padding-top: 60px;
+  padding-bottom: 20px;
+  display: block; /* Toujours afficher, mais hors de l'écran */
+}
+
+.sidenav_top.open {
+  transform: translateY(250px); /* Faites descendre le div */
+}
+
+.sidenav_top a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav_top a:hover {
+  color: #f17300;
+}
+
+.sidenav_top .closebtn {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  font-size: 36px;
+  margin-right: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav_top {
+    padding-top: 15px;
+  }
+  .sidenav_top a {
+    font-size: 18px;
+  }
+}
+
+.overlay_top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none; /* Permet de cliquer à travers l'overlay lorsqu'il est invisible */
+}
+
+.overlay_top.active {
+  opacity: 1;
+  pointer-events: auto; /* Active les interactions lorsque l'overlay est visible */
+}
+
+/* Add styles to the form container */
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 30%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: white;
+}
+
+
+
+
+/* Styles pour les boutons */
+ion-button {
+  --background: #054a91;
+  --color: #dbe4ee;
+  --border-color: #054a91;
+  --border-style: solid;
+  --border-width: 1px;
+  --padding-top: 13px;
+  --padding-bottom: 13px;
+  font-size: 20px;
+  font-family: 'Arial', serif;
+  text-transform: none;
+}
+
+ion-button:hover {
+  --background: transparent;
+  --color: #054a91;
+  --border-color: #054a91;
+}
+

@@ -1,0 +1,398 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Garamond, serif;
+  background-color: #dbe4ee;
+  overflow-y: scroll;
+}
+
+p{
+  text-align: center;
+}
+
+/* Code CSS pour une section, pour le header de chaque page */
+
+.section_header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #dbe4ee;
+  color : #06132c
+}
+
+
+/* Code CSS pour une section, pour le footer de chaque page */
+.section_footer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #054a91;
+  color: #dbe4ee
+}
+
+/* Code CSS pour le bouton qui sert a se connecter*/
+
+#div_bouton_connexion{
+  padding-top: 10px;
+  padding-left: 20px;
+  outline: none;
+}
+
+#bouton_connexion{
+
+  background-color: #06132c;
+  border-color: #06132c;
+  color: #dbe4ee;
+  outline: none;
+}
+
+#bouton_connexion:hover{
+  background-color: #dbe4ee;
+  border-color: #06132c;
+  color: #06132c;
+}
+
+/* Code CSS pour la barre de navigation */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #06132c;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav.open {
+  width: 250px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #dbe4ee;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f17300;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+@media screen and (max-width: 600px){
+  #barre_recherche_header{display:none;}
+}
+
+
+
+
+.navbar-nav .nav-item {
+  position: relative;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  display: block;
+  color: #dbe4ee; /* Couleur du texte */
+  text-decoration: none;
+  overflow: hidden; /* Assure que la ligne ne dépasse pas les bords */
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%; /* La largeur totale pour le retour à l'état initial */
+  height: 2px;
+  background-color: #06132c; /* Couleur de la ligne */
+  transition: width 0.4s ease; /* Transition pour l'agrandissement */
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%; /* Étend la ligne à 100% lors du survol */
+}
+
+.navbar-nav .nav-link:not(:hover)::after {
+  width: 0; /* Réduit la largeur à 0 lorsqu'il n'est pas survolé */
+}
+
+/* Code pour la barre de recherche qui se trouve dans le header */
+#barre_recherche_header{
+  width: 40%;
+
+}
+
+.form-control rounded{
+  color: #06132c;
+  border-color: #06132c;
+}
+
+#bouton_barre_recherche_header{
+  background-color: #06132c;
+  border-color: #06132c;
+  color: #dbe4ee
+
+}
+
+#bouton_barre_recherche_header:hover{
+  background-color: #dbe4ee;
+  border-color: #06132c;
+  color: #06132c;
+}
+
+.form-control {
+  outline: none; /* Supprime le contour bleu */
+  border-color: #dbe4ee;
+}
+
+.form-control:focus {
+  box-shadow: none; /* Supprime l'ombre portée lors du focus */
+}
+
+#input_infolettre{
+  display: flex;
+  width: 50vh;
+}
+
+#input_infolettre .form-control {
+  border-top-right-radius: 0 !important; /* Supprime les coins arrondis en haut à droite */
+  border-bottom-right-radius: 0 !important; /* Supprime les coins arrondis en bas à droite */
+}
+
+#input_infolettre .btn {
+  border-top-left-radius: 0; /* Supprime les coins arrondis en haut à gauche */
+  border-bottom-left-radius: 0; /* Supprime les coins arrondis en bas à gauche */
+}
+
+
+/* Code pour les elements ecrits dans les listes du footer */
+.nav-item{
+  padding:10px;
+}
+
+.nav-item a{
+  color: #dbe4ee;
+}
+
+.col-3 h5{
+  padding-left: 25px;
+}
+
+.col-4 h5{
+  padding-left: 25px;
+}
+
+/* Code CSS pour le texte en bas de page */
+
+.texte_bas_page{
+  font-size: 10px
+}
+
+
+/* Code CSS pour la section notes de cours */
+.section_notes_de_cours{
+  background-color: #81a4cd;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-center{
+  animation-duration: 1s;
+  position: absolute;
+  width: 100%;
+  display: none; /* Masque les slides par défaut */
+}
+
+.row{
+  align-content: center;
+  display: flex;
+}
+
+.active-slide {
+  display: block; /* Ensure active slide is visible */
+}
+
+.slide-in-right {
+  animation: slideInFromRight 1s ease-in-out forwards;
+  animation-duration: 1.5s;
+}
+
+.slide-out-left {
+  animation: slideOutToLeft 1s ease-in-out forwards;
+  animation-duration: 1.5s;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%); /* Débute à droite de l'écran */
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0); /* Se termine au centre de l'écran */
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutToLeft {
+  from {
+    transform: translateX(0); /* Débute au centre de l'écran */
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%); /* Sort vers la gauche */
+    opacity: 0;
+  }
+}
+
+
+
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #dbe4ee;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #054a91;
+}
+
+#colonne_acheter_notes{
+  background-color: #054A91;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #DBE4EE;
+  text-align: center;
+  width: 70%;
+  height: 50vh;
+  align-content: center;
+}
+
+
+
+#colonne_vendre_notes{
+  background-color:#DBE4EE;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #054A91;
+  text-align: center;
+  width: 70%;
+  height: 50vh;
+  align-content: center;
+
+}
+
+#bouton_renseignement_vente{
+  border-radius: 25px;
+  border-color: #054A91;
+  background-color: #054A91;
+  color: #DBE4EE;
+
+}
+
+#bouton_renseignement_vente:hover{
+  background-color: #DBE4EE;
+  color: #054A91;
+}
+
+#colonne_acheter_modeles{
+  background-color: #054A91;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #DBE4EE;
+  text-align: center;
+  width: 70%;
+  height: 50vh;
+}
+
+#bouton_renseignement_modeles{
+  border-radius: 25px;
+  border-color: #DBE4EE;
+  background-color: #DBE4EE;
+  color: #054A91;
+}
+
+#bouton_renseignement_modeles:hover{
+  background-color: #054A91;
+  color: #DBE4EE;
+}
+
+#footer_gros_ecrans {
+  display: flex;
+  justify-content: space-around;
+  gap: 3rem;
+}
+
+#footer_gros_ecrans .column {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-right: 20px;
+  gap: 1.5rem;
+}
+
+#footer_gros_ecrans a {
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+#footer_gros_ecrans a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+  #footer_petits_ecrans{
+    display: none;
+  }
+
+}
+
+@media (max-width: 767px) {
+  #footer_gros_ecrans{
+    display: none;
+  }
+}
+
+
+

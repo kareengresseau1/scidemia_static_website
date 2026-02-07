@@ -1,8 +1,20 @@
-<main class="main">
-  <div class="content">
-    <h1>Hello World!</h1>
-    <p>Your Angular application is ready.</p>
-  </div>
-</main>
-
-<router-outlet />
+<ion-app>
+  <ion-menu contentId="main-content" menuId="main-menu">
+    <ion-header>
+      <ion-toolbar class="custom-toolbar-side-menu">
+        <ion-title></ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <div class="sidenav" id="mySidenav">
+        <br>
+        <a href="/home">Accueil</a>
+        <a href="/notes">Nos documents</a>
+        <a href="/templates">Nos modèles</a>
+        <a href="/about-us">&Agrave; propos de nous</a>
+        <a href="/contact">Nous joindre</a>
+      </div>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+</ion-app>

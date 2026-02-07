@@ -1,0 +1,137 @@
+/* Styles de base */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Garamond, serif;
+  background-color: #81a4cd;
+  overflow-y: scroll;
+}
+
+p {
+  text-align: center;
+}
+
+/* Section header */
+.section_header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #dbe4ee;
+  color: #06132c;
+  padding: 20px;
+}
+
+/* Section notes de cours */
+.section_notes_de_cours {
+  background-color: #dbe4ee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Conteneur pour les sections */
+.sections-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Styles pour les avantages de vente */
+.avantages_vente {
+  flex: 1 1 300px;
+  max-width: 400px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.avantages_vente svg {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.avantages_vente h3 {
+  color: #06132c;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.avantages_vente p {
+  color: #06132c;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+/* Styles pour les images de l'équipe */
+.image_equipe {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* Styles pour les boutons */
+ion-button {
+  --background: #054a91;
+  --color: #dbe4ee;
+  --border-color: #054a91;
+  --border-style: solid;
+  --border-width: 1px;
+  --padding-top: 13px;
+  --padding-bottom: 13px;
+  font-size: 20px;
+  font-family: 'Arial', serif;
+  text-transform: none;
+}
+
+ion-button:hover {
+  --background: transparent;
+  --color: #054a91;
+  --border-color: #054a91;
+}
+
+/* Conteneur pour les options de la page d'accueil */
+#options_page_accueil {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 768px) {
+  .sections-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .avantages_vente {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  #options_page_accueil {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #options_page_accueil ion-button {
+    margin: 10px 0;
+  }
+}

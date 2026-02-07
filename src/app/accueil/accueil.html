@@ -1,0 +1,32 @@
+<ion-content [fullscreen]="true">
+  <main class="main">
+    <section class="section_header">
+      <app-sidebar-layout></app-sidebar-layout>
+      <br /><br />
+      <br /><br /><br />
+      <h1 id="description_header" style="text-align: center; font-weight: bold">
+        Facilite ton temps d'études
+      </h1>
+      <h2 style="text-align: center; font-weight: bold">
+        Notes de cours faits par des &eacute;tudiants, con&ccedil;us
+        pour des &eacute;tudiants
+      </h2>
+      <br /><br />
+
+      <div id="options_page_accueil">
+        <a [routerLink] = "['/notes']">
+          <ion-button shape="round">Nos documents</ion-button>
+        </a>
+
+        <br /><br />
+        <a [routerLink] = "['/templates']">
+          <ion-button shape="round">Nos modèles</ion-button>
+        </a>
+        <br /><br />
+      </div>
+
+    </section>
+
+    <app-footer></app-footer>
+  </main>
+</ion-content>

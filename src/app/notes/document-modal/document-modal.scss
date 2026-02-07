@@ -1,13 +1,14 @@
 .modal-body {
   padding: 1rem;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   gap: 1.5rem;
 }
 
 .modal-content {
   flex: 1;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -74,11 +75,6 @@ ion-button:hover {
 }
 
 @media (max-width: 500px) {
-  .modal-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .modal-image {
     width: 200px;
   }

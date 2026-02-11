@@ -12,16 +12,34 @@ p{
   text-align: center;
 }
 
-/* Code CSS pour une section, pour le header de chaque page */
-.section_header {
+/* Notes page header */
+.notes-header {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #dbe4ee;
-  background-size: cover;
-  background-position: center;
+  justify-content: flex-start;
+  padding: 6rem 1.5rem 4rem;
+  background: linear-gradient(180deg, #dbe4ee 0%, #e2eaf2 35%, #dbe4ee 100%);
   color: #06132c;
+}
+
+.notes-page-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem;
+  color: #06132c;
+  text-align: center;
+}
+
+.notes-page-subtitle {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  color: #06132c;
+  opacity: 0.85;
+  margin: 0 0 2.5rem;
+  text-align: center;
+  max-width: 28ch;
 }
 
 /* Code CSS pour la barre de navigation */
@@ -110,7 +128,7 @@ ion-accordion {
   margin-bottom: 10px;
   border: 2px solid #06132c;
   background-color: #fde4ee;
-  color: #fde4ee;
+  color: #06132c;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -126,13 +144,88 @@ ion-accordion {
   margin: 0 auto;
 }
 
-/* Espacement entre les documents (images) - notes page */
+/* Notes documents grid */
 .notes-documents-grid {
-  gap: 76px;
+  gap: 10rem;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.notes-documents-grid .avantages_vente {
-  margin: 0 38px;
+.document-card-wrapper {
+  flex: 1 1 300px;
+  max-width: 380px;
+  display: flex;
+  justify-content: center;
+}
+
+.document-card {
+  width: 100%;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 32px rgba(6, 19, 44, 0.1), 0 2px 8px rgba(6, 19, 44, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+
+  &:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 48px rgba(6, 19, 44, 0.15), 0 8px 24px rgba(5, 74, 145, 0.12);
+  }
+
+  &:active {
+    transform: translateY(-4px);
+  }
+}
+
+.document-card-image-wrap {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 24px 24px 0 0;
+  background: linear-gradient(145deg, #f0f4f8, #e8eef4);
+}
+
+.document-card-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 24px 24px 0 0;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.document-card:hover .document-card-image {
+  transform: scale(1.05);
+}
+
+.document-card-info {
+  padding: 1.5rem 1.25rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.document-card-title {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 700;
+  color: #06132c;
+  margin: 0 0 0.5rem;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.document-card-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #054a91;
+  margin: 0;
+  letter-spacing: 0.02em;
 }
 
 @media (max-width: 768px) {
@@ -141,11 +234,11 @@ ion-accordion {
   }
 
   .notes-documents-grid {
-    gap: 100px;
+    gap: 2rem;
   }
 
-  .notes-documents-grid .avantages_vente {
-    margin: 0 20px;
+  .document-card-wrapper {
+    max-width: 100%;
   }
 }
 
@@ -171,73 +264,6 @@ ion-accordion {
   padding: 20px;
 }
 
-/* Styles pour les avantages de vente */
-.avantages_vente {
-  flex: 1 1 300px;
-  max-width: 400px;
-  padding: 20px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.avantages_vente svg {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 20px;
-}
-
-.avantages_vente h3 {
-  color: #06132c;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.avantages_vente p {
-  color: #06132c;
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-top: 20px;
-}
-
-/* Styles pour les images de l'équipe */
-.image_equipe {
-  border-radius: 15px;
-  object-fit: cover;
-  margin-bottom: 20px;
-}
-
-/* Document card - clickable, ensure it receives clicks above nav overlay */
-.document-card {
-  cursor: pointer;
-  transition: opacity 0.2s;
-  position: relative;
-  z-index: 10;
-  pointer-events: auto;
-}
-.document-card:hover {
-  opacity: 0.9;
-}
-
-/* Modal content */
-.modal-content {
-  text-align: center;
-  padding: 1rem;
-}
-.modal-image {
-  max-width: 100%;
-  border-radius: 15px;
-  margin-bottom: 1.5rem;
-  object-fit: contain;
-}
-.modal-description {
-  color: #06132c;
-  text-align: left;
-  line-height: 1.6;
-  font-size: 1rem;
-}
 
 /* Styles pour les boutons */
 ion-button {

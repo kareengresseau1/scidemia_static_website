@@ -12,12 +12,69 @@
 @import '@ionic/angular/css/text-transformation.css';
 @import '@ionic/angular/css/flex-utils.css';
 
-/* Document modal - border radius and width (styles must be global for ion-modal) */
+/* Document modal - border radius and dimensions (styles must be global for ion-modal) */
 ion-modal.document-modal-rounded {
   --border-radius: 15px;
-  --width: 90%;
-  --max-width: 700px;
-  --height: 700px;
+  --width: 92%;
+  --max-width: 720px;
+  --height: 92vh;
+  --max-height: 800px;
+}
+
+/* Lightbox overlay (appended to body by document-modal so it covers full viewport) */
+.document-modal-lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.88);
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.document-modal-lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background 0.2s ease;
+}
+
+.document-modal-lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.document-modal-lightbox-content {
+  max-width: 95vw;
+  max-height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+}
+
+.document-modal-lightbox-image {
+  max-width: 100%;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 /* Custom styles */

@@ -1,27 +1,24 @@
 <ion-content [fullscreen]="true">
   <main class="main">
-    <section class="section_header">
-      <br /><br /><br /><br /><br /><br />
+    <section class="section_header notes-header">
       <app-sidebar-layout></app-sidebar-layout>
-
-      <br /><br /><br /><br />
-
-      <h2>Nos documents</h2>
-      <br />
-      <br />
+      <br><br><br>
+      <h2 class="notes-page-title">Nos documents</h2>
+      <br><br><br>
 
       <div class="sections-container notes-documents-grid">
-        <div *ngFor="let doc of documents" class="avantages_vente">
-          <button type="button" class="document-card" (click)="openModal(doc)" style="margin-bottom: 2vh; cursor: pointer; background: none; border: none; padding: 0; font: inherit; text-align: center; width: 100%;">
-            <img [src]="doc.image" [alt]="doc.title" class="image_equipe">
-            <br><br>
-            <h3 style="color:#06132c">{{ doc.title }}</h3>
-            <p style="color:#06132c">{{ doc.price }} $</p>
-            <br>
+        <div *ngFor="let doc of documents" class="document-card-wrapper">
+          <button type="button" class="document-card" (click)="openModal(doc)">
+            <div class="document-card-image-wrap">
+              <img [src]="doc.image" [alt]="doc.title" class="document-card-image">
+            </div>
+            <div class="document-card-info">
+              <h3 class="document-card-title">{{ doc.title }}</h3>
+              <p class="document-card-price">{{ doc.price }} $</p>
+            </div>
           </button>
         </div>
       </div>
-
     </section>
     <app-footer></app-footer>
   </main>

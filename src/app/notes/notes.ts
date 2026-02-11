@@ -11,6 +11,8 @@ export interface DocumentInfo {
   price: number;
   title: string;
   image: string;
+  images: string[];
+  link: string;
   description: string;
 }
 
@@ -27,14 +29,26 @@ export class Notes {
       price: 16.99,
       title: 'Cahier de notes de chimie organique',
       image: '/assets/images/screenshots_documents/cover_notebook_chemistry.png',
-      description: 'Ce cahier de chimie organique couvre les concepts fondamentaux de la structure moléculaire, les réactions organiques et la synthèse. Idéal pour les étudiants en sciences de la vie, chimie ou pharmacie. Les notes sont structurées par chapitres avec des exemples et des exercices pratiques.',
+      images: [
+        '/assets/images/screenshots_documents/cover_notebook_chemistry.png',
+        '/assets/images/screenshots_documents/content_notebook_chemistry.png',
+        '/assets/images/screenshots_documents/example_notebook_chemistry.png',
+      ],
+      link: 'https://www.amazon.ca/Cahier-chimie-organique-Loraine-Gresseau/dp/B0GLFPGH3L/ref=sr_1_1?crid=LAIALBJ54W3I&dib=eyJ2IjoiMSJ9.E2fnmwfHLZh_iGBwTZQlUP96zEqvMT51fd-pzYQ8AKIUwqQKXBytSPAj9lLrVjE0K1_WbSY_NT4BIayW9nwXlxFanOOTpz6FJqe8GLgBnTeA5a04K0KYEFAtREYuHKosq9mScqdqiKATJSF-WrWv3p58yQVjywRQTqqntrPo8ddHuZy6Inu5rxS1um1QKbtRl1-X51sV-Ko5DTpbqKyIJftTbvjb0NYrL7TbwgFGTeA.XLUdIV2Iq6snGTRCKc2Az7NxQ6m3ZsMixzj7c4j5OSY&dib_tag=se&keywords=cahier+de+notes+de+chimie+organique&qid=1770776451&s=books&sprefix=cahier+de+notes+de+chimie+organique%2Cstripbooks%2C239&sr=1-1',
+      description: 'Ce cahier est utile pour dessiner et visualiser les molécules organiques ainsi que les réactions chimiques. Idéal pour le domaine de la chimie organique. Utilisez le cahier pour compléter tes notes de cours.',
     },
     {
       id: 'compsci',
       price: 16.99,
       title: 'Cahier de notes en programmation informatique',
       image: '/assets/images/screenshots_documents/cover_notebook_compsci.png',
-      description: 'Ce cahier de programmation informatique présente les bases de la programmation, les structures de données et les algorithmes. Conçu pour les débutants et les étudiants en informatique. Inclut des exemples de code et des explications détaillées.',
+      images: [
+        '/assets/images/screenshots_documents/cover_notebook_compsci.png',
+        '/assets/images/screenshots_documents/content_notebook_compsci.png',
+        '/assets/images/screenshots_documents/example_notebook_compsci.png',
+      ],
+      link: 'https://www.amazon.ca/Cahier-programmation-informatique-Loraine-Gresseau/dp/B0GLFPGH3L/ref=sr_1_1?crid=LAIALBJ54W3I&dib=eyJ2IjoiMSJ9.E2fnmwfHLZh_iGBwTZQlUP96zEqvMT51fd-pzYQ8AKIUwqQKXBytSPAj9lLrVjE0K1_WbSY_NT4BIayW9nwXlxFanOOTpz6FJqe8GLgBnTeA5a04K0KYEFAtREYuHKosq9mScqdqiKATJSF-WrWv3p58yQVjywRQTqqntrPo8ddHuZy6Inu5rxS1um1QKbtRl1-X51sV-Ko5DTpbqKyIJftTbvjb0NYrL7TbwgFGTeA.XLUdIV2Iq6snGTRCKc2Az7NxQ6m3ZsMixzj7c4j5OSY&dib_tag=se&keywords=cahier+de+notes+de+programmation+informatique&qid=1770776451&s=books&sprefix=cahier+de+notes+de+programmation+informatique%2Cstripbooks%2C239&sr=1-1',
+      description: 'Ce cahier de programmation informatique permet de pratiquer les bases de la programmation en ecrivant du pseudocode, les structures de données, les algorithmes et dessiner des circuits logiques, etc. Conçu pour les débutants et les étudiants en informatique. Utilisez le cahier pour compléter tes notes de cours.',
     },
   ];
 

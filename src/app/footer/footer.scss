@@ -143,6 +143,11 @@ p{
   width: 0; /* Réduit la largeur à 0 lorsqu'il n'est pas survolé */
 }
 
+/* Footer nav-link hover color */
+.section_footer .nav-link:hover {
+  color: #F17300 !important;
+}
+
 /* Code pour la barre de recherche qui se trouve dans le header */
 #barre_recherche_header{
   width: 40%;

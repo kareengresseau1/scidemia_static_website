@@ -1,19 +1,36 @@
-<ion-header>
+<ion-header class="modal-header-bar">
   <ion-toolbar>
-    <ion-title>{{ doc?.title }}</ion-title>
+    <ion-title class="modal-title">{{ doc?.title }}</ion-title>
     <ion-buttons slot="end">
-      <ion-button (click)="close()">x</ion-button>
+      <ion-button class="modal-close-btn" (click)="close()" (keydown.enter)="close()" fill="clear" shape="round">×</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 <div class="modal-body" *ngIf="doc">
-  <div class="modal-image-section">
-    <img [src]="doc.image" [alt]="doc.title" class="modal-image">
+  <div class="modal-image-section slideshow-container">
+    <button type="button" class="slideshow-arrow slideshow-arrow-prev" aria-label="Image précédente"
+      *ngIf="canGoPrev" (click)="prevSlide()">
+      <span aria-hidden="true">‹</span>
+    </button>
+    <div class="modal-image-frame slideshow-image-clickable" role="button" tabindex="0" (click)="openLightbox()"
+      (keydown.enter)="openLightbox()" (keydown.space)="openLightbox()"
+      [attr.aria-label]="'Agrandir l\'image'">
+      <img [src]="currentImage" [alt]="doc.title" class="modal-image">
+    </div>
+    <button type="button" class="slideshow-arrow slideshow-arrow-next" aria-label="Image suivante"
+      *ngIf="canGoNext" (click)="nextSlide()">
+      <span aria-hidden="true">›</span>
+    </button>
+    <div class="slideshow-dots" *ngIf="slideImages.length > 1">
+      <button type="button" class="slideshow-dot" *ngFor="let img of slideImages; let i = index"
+        [class.active]="i === currentSlideIndex" [attr.aria-label]="'Image ' + (i + 1)" (click)="goToSlide(i)">
+      </button>
+    </div>
   </div>
   <div class="modal-content">
     <div class="modal-details">
       <p class="modal-price">{{ doc.price | number:'1.2-2' }} $</p>
-      <ion-button shape="round" href="https://www.amazon.ca" target="_blank" rel="noopener">Acheter</ion-button>
+      <ion-button class="modal-buy-btn" shape="round" href="{{ doc.link }}" target="_blank" rel="noopener">Acheter</ion-button>
       <p class="modal-description">{{ doc.description }}</p>
     </div>
   </div>

@@ -1,123 +1,82 @@
 <ion-content [fullscreen]="true">
   <main class="main">
-    <section class="section_header">
-      <br /><br />
-      <br /><br />
+    <section class="about-hero">
       <app-sidebar-layout></app-sidebar-layout>
-
-
-      <br>
-      <br>
-      <h2 style="font-weight: bold">&Agrave; propos de nous</h2>
-      <h3 style="text-align: center; color: #06132c; font-weight: bold">
-        Scidemia est une plateforme offrant des cahiers de prise de notes pour t'aider à mieux et plus rapidement à prendre des notes
-      </h3>
-      <br>
-      <br><br><br>
-      <h4 style="text-align: center; color: #06132c; font-weight: bold">
-        Que tu sois en première année de CÉGEP ou sur le point de terminer ton baccalauréat, <br>Scidemia offre une variété de documents pouvant rendre ta session d'études plus facile.
-      </h4>
+      <h2 class="about-hero-title">À propos de nous</h2>
+      <p class="about-hero-subtitle">
+        Scidemia est une plateforme offrant des cahiers de prise de notes pour t'aider à mieux et plus rapidement à prendre des notes.
+      </p>
+      <p class="about-hero-tagline">
+        Que tu sois en première année de CÉGEP ou sur le point de terminer ton baccalauréat, Scidemia offre une variété de documents pouvant rendre ta session d'études plus facile.
+      </p>
     </section>
-    <section class="section_notes_de_cours">
-
-      <hr width="80%" size="2" color="#81a4cd" noshade />
-      <h2 style="color: #06132c; font-weight: bold">Avantages d'acheter des notes</h2>
-
-      <br /><br /><br />
+    <section class="about-section section-achat">
+      <br><br><br><br>
+      <h2 class="section_title">Avantages d'acheter des cahies de notes</h2>
+      <br><br><br><br><br>
       <div class="sections-container">
-        <div class="avantages_vente"  style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-          <div style="margin-bottom: 2vh">
-            <svg width="80px" height="80px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="avantages_vente">
+          <div class="advantage-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM3.00683 12C3.00683 16.9668 7.03321 20.9932 12 20.9932C16.9668 20.9932 20.9932 16.9668 20.9932 12C20.9932 7.03321 16.9668 3.00683 12 3.00683C7.03321 3.00683 3.00683 7.03321 3.00683 12Z" fill="#06132c"/>
               <path d="M12 5C11.4477 5 11 5.44771 11 6V12.4667C11 12.4667 11 12.7274 11.1267 12.9235C11.2115 13.0898 11.3437 13.2343 11.5174 13.3346L16.1372 16.0019C16.6155 16.278 17.2271 16.1141 17.5032 15.6358C17.7793 15.1575 17.6155 14.5459 17.1372 14.2698L13 11.8812V6C13 5.44772 12.5523 5 12 5Z" fill="#06132c"/>
               </svg>
-            <br><br>
-            <h3 style="color: #06132c">
-              Permet de sauver du temps
-            </h3>
-            <br>
-
-            <p style="color: #06132c; margin-top: 20px" >
-              Si tu as besoin de faire des notes détaillées pour un cours, les documents de prose de notes de cours te permettront de gagner du temps et de mieux comprendre le cours.
-            </p>
           </div>
+          <h3>Permet de sauver du temps</h3>
+          <p>Si tu as besoin de faire des notes détaillées pour un cours, les documents de notes de cours te permettront de gagner du temps et de mieux comprendre le cours.</p>
         </div>
 
         <div class="avantages_vente">
-          <div style="margin-bottom: 2vh">
-            <svg width="80px" height="80px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" >
+          <div class="advantage-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" >
             <path d="M18.18 8.03933L18.6435 7.57589C19.4113 6.80804 20.6563 6.80804 21.4241 7.57589C22.192 8.34374 22.192 9.58868 21.4241 10.3565L20.9607 10.82M18.18 8.03933C18.18 8.03933 18.238 9.02414 19.1069 9.89309C19.9759 10.762 20.9607 10.82 20.9607 10.82M18.18 8.03933L13.9194 12.2999C13.6308 12.5885 13.4865 12.7328 13.3624 12.8919C13.2161 13.0796 13.0906 13.2827 12.9882 13.4975C12.9014 13.6797 12.8368 13.8732 12.7078 14.2604L12.2946 15.5L12.1609 15.901M20.9607 10.82L16.7001 15.0806C16.4115 15.3692 16.2672 15.5135 16.1081 15.6376C15.9204 15.7839 15.7173 15.9094 15.5025 16.0118C15.3203 16.0986 15.1268 16.1632 14.7396 16.2922L13.5 16.7054L13.099 16.8391M13.099 16.8391L12.6979 16.9728C12.5074 17.0363 12.2973 16.9867 12.1553 16.8447C12.0133 16.7027 11.9637 16.4926 12.0272 16.3021L12.1609 15.901M13.099 16.8391L12.1609 15.901" stroke="#1C274C" stroke-width="1.5"/>
             <path d="M8 13H10.5" stroke="#06132c" stroke-width="1.5" stroke-linecap="round"/>
             <path d="M8 9H14.5" stroke="#06132c" stroke-width="1.5" stroke-linecap="round"/>
             <path d="M8 17H9.5" stroke="#06132c" stroke-width="1.5" stroke-linecap="round"/>
             <path d="M19.8284 3.17157C18.6569 2 16.7712 2 13 2H11C7.22876 2 5.34315 2 4.17157 3.17157C3 4.34315 3 6.22876 3 10V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22H13C16.7712 22 18.6569 22 19.8284 20.8284C20.7715 19.8853 20.9554 18.4796 20.9913 16" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
-              <br><br>
-            <h3 style="color:#06132c">Compléter tes notes de cours en ta possession</h3>
-            <br>
-            <p style="color: #06132c">
-              Accumule non seulement des connaissances, mais aussi des nouvelles stratégies d'études qui pourraient révolutionner ta façon d'étudier
-            </p>
           </div>
+          <h3>Compléter tes notes de cours en ta possession</h3>
+          <p>Accumule non seulement des connaissances, mais aussi des nouvelles stratégies d'études qui pourraient révolutionner ta façon d'étudier.</p>
         </div>
 
         <div class="avantages_vente">
-          <div style="margin-bottom: 2vh">
-            <svg width="80px" height="80px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="advantage-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M9.00001 18.25C8.8993 18.2466 8.80034 18.2227 8.70921 18.1797C8.61807 18.1367 8.53667 18.0756 8.47001 18L3.47001 13C3.37467 12.9382 3.29463 12.8556 3.23592 12.7583C3.17721 12.661 3.14136 12.5517 3.13109 12.4385C3.12082 12.3254 3.13639 12.2114 3.17663 12.1051C3.21686 11.9989 3.28071 11.9031 3.36336 11.8252C3.446 11.7472 3.54528 11.689 3.65369 11.6551C3.76211 11.6211 3.87682 11.6122 3.98918 11.629C4.10155 11.6458 4.20861 11.688 4.3023 11.7523C4.39599 11.8165 4.47385 11.9013 4.53001 12L9.00001 16.44L19.47 6.00003C19.611 5.90864 19.7785 5.86722 19.9458 5.88241C20.1131 5.89759 20.2705 5.96851 20.3927 6.08379C20.5149 6.19907 20.5948 6.35203 20.6197 6.51817C20.6446 6.68431 20.613 6.85399 20.53 7.00003L9.53001 18C9.46334 18.0756 9.38194 18.1367 9.29081 18.1797C9.19967 18.2227 9.10072 18.2466 9.00001 18.25Z" fill="#06132c"/>
               </svg>
-              <br><br>
-            <h3 style="color:#06132c"> Achete d&egrave;s maintenant</h3>
-            <br>
-            <br>
-            <p style="color: #06132c">
-              Une fois le document acheté, il sera accessible à partir de ton compte. Chaque document est fourni d'une description du contenu ainsi que des mots-clés pour t'assurer que ton achat ne sera pas gaspillé.
-            </p>
           </div>
+          <h3>Achete dès maintenant</h3>
+          <p>Une fois le document acheté, il sera accessible à partir de ton compte. Chaque document est fourni d'une description du contenu ainsi que des mots-clés pour t'assurer que ton achat ne sera pas gaspillé.</p>
         </div>
       </div>
-
-      <br><br><br><br>
-      <div id="options_page_accueil">
-        <ion-button shape="round" [routerLink]="['/notes']">Voir nos documents </ion-button>
-        <br /><br />
-        <ion-button shape="round" [routerLink]="['/templates']">Voir nos mod&egrave;les</ion-button>
-        <br /><br />
+      <br><br><br><br><br>
+      <div id="options_page_accueil" class="about-cta">
+        <ion-button shape="round" [routerLink]="['/notes']">Voir nos documents</ion-button>
       </div>
+    </section>
 
-
-      <br /><br /><br /><br /><br /><br />
-      <hr width="80%" size="2" color="#81a4cd" noshade />
-      <h2 style="color: #06132c; fot-weight: bold">Avantages de vendre tes notes</h2>
-
-      <br /><br /><br />
+    <section class="about-section section-vente">
+      <h2 class="section_title">Avantages de vendre tes notes</h2>
+      <br><br><br><br><br>
       <div class="sections-container">
         <div class="avantages_vente">
-          <div style="margin-bottom: 2vh">
-            <svg fill="#06132c" width="80px" height="80px" viewBox="0 0 16 16" data-name="Layer 1" id="Layer_1" xmlns="http://www.w3.org/2000/svg">
+          <div class="advantage-icon">
+            <svg fill="#06132c" width="40" height="40" viewBox="0 0 16 16" data-name="Layer 1" id="Layer_1" xmlns="http://www.w3.org/2000/svg">
               <title></title>
               <ellipse cx="6" cy="5.5" rx="1" ry="1.5" />
               <ellipse cx="10" cy="5.5" rx="1" ry="1.5" />
               <path d="M8.071,13.071A5.076,5.076,0,0,1,3,8H4.143A3.929,3.929,0,1,0,12,8h1.143A5.077,5.077,0,0,1,8.071,13.071Z" />
               <path d="M8,1A7,7,0,1,1,1,8,7.008,7.008,0,0,1,8,1M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0Z" />
             </svg>
-            <br><br>
-            <h3 style="color: #06132c">
-              T&eacute;l&eacute;charge tes documents rapidement
-            </h3>
-            <br>
-
-            <p style="color: #06132c">
-              Si tu as des comp&eacute;tences dans les domaines de la
-              science, tes documents sont recherch&eacute;s par plusieurs
-              &eacute;tudiants.
-            </p>
           </div>
+          <h3>Télécharge tes documents rapidement</h3>
+          <p>Si tu as des compétences dans les domaines de la science, tes documents sont recherchés par plusieurs étudiants.</p>
         </div>
 
         <div class="avantages_vente">
-          <div style="margin-bottom: 2vh">
-            <svg width="80px" height="80px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="advantage-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_443_3628)">
               <rect x="2" y="6" width="20" height="12" stroke="#06132c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M22 10C21.4747 10 20.9546 9.89654 20.4693 9.69552C19.984 9.4945 19.543 9.19986 19.1716 8.82843C18.8001 8.45699 18.5055 8.01604 18.3045 7.53073C18.1035 7.04543 18 6.52529 18 6L22 6L22 10Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -134,85 +93,45 @@
               </clipPath>
               </defs>
               </svg>
-              <br><br>
-            <h3 style="color:#06132c">Mon&eacute;tise tes connaissances</h3>
-            <br>
-            <p style="color: #06132c">
-              Transforme tes documents acad&eacute;miques en revenu en les mettant en vente sur notre plateforme. Que tu aies des notes de cours, des guides d'&eacute;tude ou des r&eacute;sum&eacute;s, chaque document peut te rapporter de l'argent.
-            </p>
           </div>
+          <h3>Monétise tes connaissances</h3>
+          <p>Transforme tes documents académiques en revenu en les mettant en vente sur notre plateforme. Que tu aies des notes de cours, des guides d'étude ou des résumés, chaque document peut te rapporter de l'argent.</p>
         </div>
 
         <div class="avantages_vente">
-          <div style="margin-bottom: 2vh">
-            <svg fill="#06132c" width="80px" height="80px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <div class="advantage-icon">
+            <svg fill="#06132c" width="40" height="40" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <title>network</title>
               <path d="M27 22.25c-0.831 0.002-1.598 0.277-2.215 0.739l0.010-0.007-3.299-2.998c0.82-1.097 1.313-2.479 1.313-3.977 0-1.614-0.572-3.094-1.525-4.249l0.009 0.011 3.644-3.643c0.584 0.391 1.302 0.624 2.074 0.624 2.077 0 3.76-1.683 3.76-3.76s-1.683-3.76-3.76-3.76c-2.077 0-3.76 1.683-3.76 3.76 0 0.773 0.233 1.491 0.633 2.088l-0.009-0.014-3.643 3.643c-1.145-0.944-2.627-1.517-4.244-1.517-0.937 0-1.828 0.192-2.638 0.54l0.044-0.017-1.032-1.874c0.791-0.688 1.288-1.695 1.288-2.819 0-2.060-1.67-3.729-3.729-3.729s-3.729 1.67-3.729 3.729c0 2.060 1.67 3.729 3.729 3.729 0.007 0 0.015-0 0.022-0h-0.001c0.398-0.006 0.778-0.073 1.133-0.194l-0.026 0.008 1.037 1.883c-1.757 1.243-2.89 3.265-2.894 5.553v0.001c0.010 0.697 0.125 1.364 0.33 1.99l-0.013-0.047-1.423 0.603c-0.681-0.971-1.795-1.597-3.056-1.597-2.056 0-3.722 1.666-3.722 3.722s1.666 3.722 3.722 3.722c2.056 0 3.722-1.666 3.722-3.722 0-0.264-0.027-0.521-0.079-0.769l0.004 0.024 1.419-0.602c1.167 2.093 3.367 3.485 5.892 3.485 1.73 0 3.308-0.654 4.5-1.728l-0.006 0.005 3.309 3.007c-0.335 0.544-0.535 1.201-0.539 1.906v0.001c0 2.071 1.679 3.75 3.75 3.75s3.75-1.679 3.75-3.75c0-2.071-1.679-3.75-3.75-3.75v0zM7.69 5c0-1.243 1.007-2.25 2.25-2.25s2.25 1.007 2.25 2.25c0 1.243-1.007 2.25-2.25 2.25v0c-1.242-0.002-2.248-1.008-2.25-2.25v-0zM5 22.92c-1.242-0.001-2.248-1.007-2.248-2.249s1.007-2.249 2.249-2.249c1.242 0 2.248 1.006 2.249 2.248v0c-0.002 1.242-1.008 2.248-2.25 2.25h-0zM27 2.75c1.243 0 2.25 1.007 2.25 2.25s-1.007 2.25-2.25 2.25c-1.243 0-2.25-1.007-2.25-2.25v0c0.002-1.242 1.008-2.248 2.25-2.25h0zM10.69 16c0-0 0-0 0-0.001 0-2.932 2.377-5.309 5.309-5.309s5.309 2.377 5.309 5.309c0 2.932-2.377 5.309-5.309 5.309h-0c-2.931-0.003-5.306-2.378-5.31-5.308v-0zM27 28.25c-1.243 0-2.25-1.007-2.25-2.25s1.007-2.25 2.25-2.25c1.243 0 2.25 1.007 2.25 2.25v0c-0.002 1.242-1.008 2.248-2.25 2.25h-0z"></path>
               </svg>
-              <br><br>
-            <h3 style="color:#06132c"> Commence &agrave; gagner d&egrave;s maintenant</h3>
-            <br>
-            <p style="color: #06132c">
-              Une fois tes documents publi&eacute;s, ils deviennent accessible &agrave; une vaste audience prête à acheter. Plus tes documents sont téléchargés, plus tes gains augmentent.
-            </p>
           </div>
+          <h3>Commence à gagner dès maintenant</h3>
+          <p>Une fois tes documents publiés, ils deviennent accessibles à une vaste audience prête à acheter. Plus tes documents sont téléchargés, plus tes gains augmentent.</p>
         </div>
       </div>
-      <br /><br /><br /><br /><br /><br /><br/><br/>
-
-
-      <br /><br /><br />
     </section>
 
-
-
-
-    <section class="section_notes_de_cours">
-      <h2 style="text-align: center; color: #06132c"> Notre &eacute;quipe </h2>
+    <section class="about-section team-section">
+      <br><br><br><br>
+      <h2 class="section_title">Notre équipe</h2>
+      <br><br><br><br><br>
       <div class="sections-container">
-        <div class="avantages_vente"  style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-          <div style="margin-bottom: 2vh">
-            <img src="../../assets/images/photo_alex_1.4.jpg" alt="Alex Gresseau" class="image_equipe">
-            <br><br>
-            <h3 style="color: #06132c">
-              Alex Gresseau
-            </h3>
-            <br>
-            <p style="color:#06132c">Responsable en marketing et communication</p>
-
-
-          </div>
-        </div>
-
-
         <div class="avantages_vente">
-          <div style="margin-bottom: 2vh">
-
-            <img src="../../assets/images/photo_kareen.jpg" alt="Alex Gresseau" class="image_equipe">
-
-              <br><br>
-            <h3 style="color:#06132c"> Kareen Gresseau</h3>
-            <br>
-
-            <p style="color:#06132c">Support technique et d&eacute;veloppement web</p>
-          </div>
+          <img src="/assets/images/photo_alex_1.4.jpg" alt="Alex Gresseau" class="image_equipe">
+          <h3>Alex Gresseau</h3>
+          <p>Responsable en marketing et communication</p>
         </div>
         <div class="avantages_vente">
-          <div style="margin-bottom: 2vh">
-            <img src="../../assets/images/photo_loraine.jpg" alt="Alex Gresseau" class="image_equipe">
-
-
-              <br><br>
-            <h3 style="color:#06132c"> Loraine Gresseau</h3>
-            <br>
-
-            <p style="color:#06132c">Responsable du contenu scientifique</p>
-
-          </div>
+          <img src="/assets/images/photo_kareen.jpg" alt="Kareen Gresseau" class="image_equipe">
+          <h3>Kareen Gresseau</h3>
+          <p>Support technique et développement web</p>
+        </div>
+        <div class="avantages_vente">
+          <img src="/assets/images/photo_loraine.jpg" alt="Loraine Gresseau" class="image_equipe">
+          <h3>Loraine Gresseau</h3>
+          <p>Responsable du contenu scientifique</p>
         </div>
       </div>
-      <br><br><br><br><br>
-
     </section>
 
 

@@ -5,7 +5,7 @@
       <app-sidebar-layout></app-sidebar-layout>
 
       <br /><br />
-      <h2><b>Nous joindre</b></h2>
+      <h2><b>{{ 'contact.title' | translate }}</b></h2>
       <div class="container">
         <form (ngSubmit)="sendMessage()" [formGroup]="contact">
           <!-- Honeypot field - hidden from users, bots will fill it -->
@@ -18,44 +18,44 @@
           <ion-input
             fill="outline"
             type="text"
-            placeholder="Nom"
+            [placeholder]="'contact.namePlaceholder' | translate"
             formControlName="nom"
             class="custom-input"
             aria-label="Search"
             aria-describedby="search-addon"
           ></ion-input>
           <ion-text color="danger" *ngIf="contact.get('nom')?.invalid && (contact.get('nom')?.dirty || contact.get('nom')?.touched)">
-            * Le nom est requis.
+            {{ 'contact.nameRequired' | translate }}
           </ion-text>
           <br />
 
           <ion-input
             fill="outline"
             type="email"
-            placeholder="Courriel"
+            [placeholder]="'contact.emailPlaceholder' | translate"
             formControlName="email"
             class="custom-input"
           ></ion-input>
           <ion-text color="danger" *ngIf="contact.get('email')?.invalid && (contact.get('email')?.dirty || contact.get('email')?.touched)">
-            * Un email valide est requis.
+            {{ 'contact.emailRequired' | translate }}
           </ion-text>
 
           <br />
           <ion-input
             fill="outline"
             type="text"
-            placeholder="Sujet"
+            [placeholder]="'contact.subjectPlaceholder' | translate"
             formControlName="sujet"
             class="custom-input"
           ></ion-input>
           <ion-text color="danger" *ngIf="contact.get('sujet')?.invalid && (contact.get('sujet')?.dirty || contact.get('sujet')?.touched)">
-            * Le sujet est requis.
+            {{ 'contact.subjectRequired' | translate }}
           </ion-text>
 
           <br />
           <ion-textarea
             fill="outline"
-            placeholder="Votre message ..."
+            [placeholder]="'contact.messagePlaceholder' | translate"
             formControlName="contenu"
             class="custom-textarea"
             autoGrow="true"
@@ -64,32 +64,32 @@
             rows="10"
           ></ion-textarea>
           <ion-text color="danger" *ngIf="contact.get('contenu')?.invalid && (contact.get('contenu')?.dirty || contact.get('contenu')?.touched)">
-            * Un message est requis.
+            {{ 'contact.messageRequired' | translate }}
           </ion-text>
           <div class="button-container">
-            <ion-button shape="round" type="submit" [disabled]="contact.invalid">Envoyer </ion-button>
+            <ion-button shape="round" type="submit" [disabled]="contact.invalid">{{ 'contact.send' | translate }}</ion-button>
           </div>
         </form>
 
         <!-- Success message -->
         <div *ngIf="messageSent" style="margin-top: 2rem; padding: 1rem; background-color: #4CAF50; color: white; border-radius: 8px; text-align: center;">
-          <p style="margin: 0; font-size: 1.1rem;">Votre courriel a été envoyé avec succès!</p>
+          <p style="margin: 0; font-size: 1.1rem;">{{ 'contact.success' | translate }}</p>
         </div>
 
         <!-- Error message -->
         <div *ngIf="messageError" style="margin-top: 2rem; padding: 1rem; background-color: #f44336; color: white; border-radius: 8px; text-align: center;">
-          <p style="margin: 0; font-size: 1.1rem;">Une erreur est survenue. Veuillez réessayer.</p>
+          <p style="margin: 0; font-size: 1.1rem;">{{ 'contact.error' | translate }}</p>
         </div>
 
         <!-- Toxicity error message -->
         <div *ngIf="toxicityError" style="margin-top: 2rem; padding: 1rem; background-color: #ff9800; color: white; border-radius: 8px; text-align: center;">
-          <p style="margin: 0; font-size: 1.1rem;">Votre message a été détecté comme contenant un langage inapproprié. Veuillez reformuler votre message.</p>
-          <p *ngIf="toxicityScore !== null" style="margin: 0.5rem 0 0 0; font-size: 0.9rem;">Score de toxicité: {{ (toxicityScore * 100).toFixed(0) }}%</p>
+          <p style="margin: 0; font-size: 1.1rem;">{{ 'contact.toxicityError' | translate }}</p>
+          <p *ngIf="toxicityScore !== null" style="margin: 0.5rem 0 0 0; font-size: 0.9rem;">{{ 'contact.toxicityScore' | translate }} {{ (toxicityScore * 100).toFixed(0) }}%</p>
         </div>
 
         <!-- Rate limit message -->
         <div *ngIf="rateLimited" style="margin-top: 2rem; padding: 1rem; background-color: #2196F3; color: white; border-radius: 8px; text-align: center;">
-          <p style="margin: 0; font-size: 1.1rem;">Veuillez patienter une minute avant d'envoyer un autre message.</p>
+          <p style="margin: 0; font-size: 1.1rem;">{{ 'contact.rateLimited' | translate }}</p>
         </div>
       </div>
     </section>

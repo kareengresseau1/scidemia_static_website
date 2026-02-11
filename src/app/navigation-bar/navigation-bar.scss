@@ -16,10 +16,48 @@ body, html {
 .nav-bar-wrapper ion-toolbar,
 .nav-bar-wrapper ion-buttons,
 .nav-bar-wrapper ion-menu-button,
+.nav-bar-wrapper .lang-toggle-wrapper,
+.nav-bar-wrapper .lang-btn,
 [slot="start"],
 [slot="start"] a,
 [slot="start"] img {
   pointer-events: auto;
+}
+
+.lang-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-right: 0.5rem;
+}
+
+.lang-btn {
+  background: none;
+  border: 1px solid #06132c;
+  color: #06132c;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.lang-btn:hover {
+  background-color: #06132c;
+  color: #dbe4ee;
+}
+
+.lang-btn.active {
+  background-color: #06132c;
+  color: #dbe4ee;
+  font-weight: 600;
+}
+
+.lang-sep {
+  color: #06132c;
+  font-weight: 300;
+  user-select: none;
 }
 
 .custom-toolbar-side-menu {

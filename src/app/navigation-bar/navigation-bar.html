@@ -6,6 +6,11 @@
         <ion-menu-button menu="main-menu"></ion-menu-button>
       </ion-buttons>
       <ion-title></ion-title>
+      <ion-buttons slot="end" class="lang-toggle-wrapper">
+        <button type="button" class="lang-btn" [class.active]="currentLang === 'fr'" (click)="setLang('fr')" aria-label="Français">FR</button>
+        <span class="lang-sep">|</span>
+        <button type="button" class="lang-btn" [class.active]="currentLang === 'en'" (click)="setLang('en')" aria-label="English">EN</button>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
 </div>

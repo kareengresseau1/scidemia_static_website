@@ -2,17 +2,17 @@
   <main class="main">
     <section class="about-hero">
       <app-sidebar-layout></app-sidebar-layout>
-      <h2 class="about-hero-title">À propos de nous</h2>
+      <h2 class="about-hero-title">{{ 'about.title' | translate }}</h2>
       <p class="about-hero-subtitle">
-        Scidemia est une plateforme offrant des cahiers de prise de notes pour t'aider à mieux et plus rapidement à prendre des notes.
+        {{ 'about.subtitle' | translate }}
       </p>
       <p class="about-hero-tagline">
-        Que tu sois en première année de CÉGEP ou sur le point de terminer ton baccalauréat, Scidemia offre une variété de documents pouvant rendre ta session d'études plus facile.
+        {{ 'about.tagline' | translate }}
       </p>
     </section>
     <section class="about-section section-achat">
       <br><br><br><br>
-      <h2 class="section_title">Avantages d'acheter des cahies de notes</h2>
+      <h2 class="section_title">{{ 'about.buyAdvantagesTitle' | translate }}</h2>
       <br><br><br><br><br>
       <div class="sections-container">
         <div class="avantages_vente">
@@ -22,8 +22,8 @@
               <path d="M12 5C11.4477 5 11 5.44771 11 6V12.4667C11 12.4667 11 12.7274 11.1267 12.9235C11.2115 13.0898 11.3437 13.2343 11.5174 13.3346L16.1372 16.0019C16.6155 16.278 17.2271 16.1141 17.5032 15.6358C17.7793 15.1575 17.6155 14.5459 17.1372 14.2698L13 11.8812V6C13 5.44772 12.5523 5 12 5Z" fill="#06132c"/>
               </svg>
           </div>
-          <h3>Permet de sauver du temps</h3>
-          <p>Si tu as besoin de faire des notes détaillées pour un cours, les documents de notes de cours te permettront de gagner du temps et de mieux comprendre le cours.</p>
+          <h3>{{ 'about.advantage1Title' | translate }}</h3>
+          <p>{{ 'about.advantage1Desc' | translate }}</p>
         </div>
 
         <div class="avantages_vente">
@@ -36,8 +36,8 @@
             <path d="M19.8284 3.17157C18.6569 2 16.7712 2 13 2H11C7.22876 2 5.34315 2 4.17157 3.17157C3 4.34315 3 6.22876 3 10V14C3 17.7712 3 19.6569 4.17157 20.8284C5.34315 22 7.22876 22 11 22H13C16.7712 22 18.6569 22 19.8284 20.8284C20.7715 19.8853 20.9554 18.4796 20.9913 16" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
           </div>
-          <h3>Compléter tes notes de cours en ta possession</h3>
-          <p>Accumule non seulement des connaissances, mais aussi des nouvelles stratégies d'études qui pourraient révolutionner ta façon d'étudier.</p>
+          <h3>{{ 'about.advantage2Title' | translate }}</h3>
+          <p>{{ 'about.advantage2Desc' | translate }}</p>
         </div>
 
         <div class="avantages_vente">
@@ -46,18 +46,18 @@
               <path d="M9.00001 18.25C8.8993 18.2466 8.80034 18.2227 8.70921 18.1797C8.61807 18.1367 8.53667 18.0756 8.47001 18L3.47001 13C3.37467 12.9382 3.29463 12.8556 3.23592 12.7583C3.17721 12.661 3.14136 12.5517 3.13109 12.4385C3.12082 12.3254 3.13639 12.2114 3.17663 12.1051C3.21686 11.9989 3.28071 11.9031 3.36336 11.8252C3.446 11.7472 3.54528 11.689 3.65369 11.6551C3.76211 11.6211 3.87682 11.6122 3.98918 11.629C4.10155 11.6458 4.20861 11.688 4.3023 11.7523C4.39599 11.8165 4.47385 11.9013 4.53001 12L9.00001 16.44L19.47 6.00003C19.611 5.90864 19.7785 5.86722 19.9458 5.88241C20.1131 5.89759 20.2705 5.96851 20.3927 6.08379C20.5149 6.19907 20.5948 6.35203 20.6197 6.51817C20.6446 6.68431 20.613 6.85399 20.53 7.00003L9.53001 18C9.46334 18.0756 9.38194 18.1367 9.29081 18.1797C9.19967 18.2227 9.10072 18.2466 9.00001 18.25Z" fill="#06132c"/>
               </svg>
           </div>
-          <h3>Achete dès maintenant</h3>
-          <p>Une fois le document acheté, il sera accessible à partir de ton compte. Chaque document est fourni d'une description du contenu ainsi que des mots-clés pour t'assurer que ton achat ne sera pas gaspillé.</p>
+          <h3>{{ 'about.advantage3Title' | translate }}</h3>
+          <p>{{ 'about.advantage3Desc' | translate }}</p>
         </div>
       </div>
       <br><br><br><br><br>
       <div id="options_page_accueil" class="about-cta">
-        <ion-button shape="round" [routerLink]="['/notes']">Voir nos documents</ion-button>
+        <ion-button shape="round" [routerLink]="['/notes']">{{ 'about.viewDocuments' | translate }}</ion-button>
       </div>
     </section>
 
     <section class="about-section section-vente">
-      <h2 class="section_title">Avantages de vendre tes notes</h2>
+      <h2 class="section_title">{{ 'about.sellAdvantagesTitle' | translate }}</h2>
       <br><br><br><br><br>
       <div class="sections-container">
         <div class="avantages_vente">
@@ -70,8 +70,8 @@
               <path d="M8,1A7,7,0,1,1,1,8,7.008,7.008,0,0,1,8,1M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0Z" />
             </svg>
           </div>
-          <h3>Télécharge tes documents rapidement</h3>
-          <p>Si tu as des compétences dans les domaines de la science, tes documents sont recherchés par plusieurs étudiants.</p>
+          <h3>{{ 'about.sell1Title' | translate }}</h3>
+          <p>{{ 'about.sell1Desc' | translate }}</p>
         </div>
 
         <div class="avantages_vente">
@@ -94,8 +94,8 @@
               </defs>
               </svg>
           </div>
-          <h3>Monétise tes connaissances</h3>
-          <p>Transforme tes documents académiques en revenu en les mettant en vente sur notre plateforme. Que tu aies des notes de cours, des guides d'étude ou des résumés, chaque document peut te rapporter de l'argent.</p>
+          <h3>{{ 'about.sell2Title' | translate }}</h3>
+          <p>{{ 'about.sell2Desc' | translate }}</p>
         </div>
 
         <div class="avantages_vente">
@@ -105,31 +105,31 @@
               <path d="M27 22.25c-0.831 0.002-1.598 0.277-2.215 0.739l0.010-0.007-3.299-2.998c0.82-1.097 1.313-2.479 1.313-3.977 0-1.614-0.572-3.094-1.525-4.249l0.009 0.011 3.644-3.643c0.584 0.391 1.302 0.624 2.074 0.624 2.077 0 3.76-1.683 3.76-3.76s-1.683-3.76-3.76-3.76c-2.077 0-3.76 1.683-3.76 3.76 0 0.773 0.233 1.491 0.633 2.088l-0.009-0.014-3.643 3.643c-1.145-0.944-2.627-1.517-4.244-1.517-0.937 0-1.828 0.192-2.638 0.54l0.044-0.017-1.032-1.874c0.791-0.688 1.288-1.695 1.288-2.819 0-2.060-1.67-3.729-3.729-3.729s-3.729 1.67-3.729 3.729c0 2.060 1.67 3.729 3.729 3.729 0.007 0 0.015-0 0.022-0h-0.001c0.398-0.006 0.778-0.073 1.133-0.194l-0.026 0.008 1.037 1.883c-1.757 1.243-2.89 3.265-2.894 5.553v0.001c0.010 0.697 0.125 1.364 0.33 1.99l-0.013-0.047-1.423 0.603c-0.681-0.971-1.795-1.597-3.056-1.597-2.056 0-3.722 1.666-3.722 3.722s1.666 3.722 3.722 3.722c2.056 0 3.722-1.666 3.722-3.722 0-0.264-0.027-0.521-0.079-0.769l0.004 0.024 1.419-0.602c1.167 2.093 3.367 3.485 5.892 3.485 1.73 0 3.308-0.654 4.5-1.728l-0.006 0.005 3.309 3.007c-0.335 0.544-0.535 1.201-0.539 1.906v0.001c0 2.071 1.679 3.75 3.75 3.75s3.75-1.679 3.75-3.75c0-2.071-1.679-3.75-3.75-3.75v0zM7.69 5c0-1.243 1.007-2.25 2.25-2.25s2.25 1.007 2.25 2.25c0 1.243-1.007 2.25-2.25 2.25v0c-1.242-0.002-2.248-1.008-2.25-2.25v-0zM5 22.92c-1.242-0.001-2.248-1.007-2.248-2.249s1.007-2.249 2.249-2.249c1.242 0 2.248 1.006 2.249 2.248v0c-0.002 1.242-1.008 2.248-2.25 2.25h-0zM27 2.75c1.243 0 2.25 1.007 2.25 2.25s-1.007 2.25-2.25 2.25c-1.243 0-2.25-1.007-2.25-2.25v0c0.002-1.242 1.008-2.248 2.25-2.25h0zM10.69 16c0-0 0-0 0-0.001 0-2.932 2.377-5.309 5.309-5.309s5.309 2.377 5.309 5.309c0 2.932-2.377 5.309-5.309 5.309h-0c-2.931-0.003-5.306-2.378-5.31-5.308v-0zM27 28.25c-1.243 0-2.25-1.007-2.25-2.25s1.007-2.25 2.25-2.25c1.243 0 2.25 1.007 2.25 2.25v0c-0.002 1.242-1.008 2.248-2.25 2.25h-0z"></path>
               </svg>
           </div>
-          <h3>Commence à gagner dès maintenant</h3>
-          <p>Une fois tes documents publiés, ils deviennent accessibles à une vaste audience prête à acheter. Plus tes documents sont téléchargés, plus tes gains augmentent.</p>
+          <h3>{{ 'about.sell3Title' | translate }}</h3>
+          <p>{{ 'about.sell3Desc' | translate }}</p>
         </div>
       </div>
     </section>
 
     <section class="about-section team-section">
       <br><br><br><br>
-      <h2 class="section_title">Notre équipe</h2>
+      <h2 class="section_title">{{ 'about.teamTitle' | translate }}</h2>
       <br><br><br><br><br>
       <div class="sections-container">
         <div class="avantages_vente">
           <img src="/assets/images/photo_alex_1.4.jpg" alt="Alex Gresseau" class="image_equipe">
-          <h3>Alex Gresseau</h3>
-          <p>Responsable en marketing et communication</p>
+          <h3>{{ 'about.teamAlex' | translate }}</h3>
+          <p>{{ 'about.teamAlexRole' | translate }}</p>
         </div>
         <div class="avantages_vente">
           <img src="/assets/images/photo_kareen.jpg" alt="Kareen Gresseau" class="image_equipe">
-          <h3>Kareen Gresseau</h3>
-          <p>Support technique et développement web</p>
+          <h3>{{ 'about.teamKareen' | translate }}</h3>
+          <p>{{ 'about.teamKareenRole' | translate }}</p>
         </div>
         <div class="avantages_vente">
           <img src="/assets/images/photo_loraine.jpg" alt="Loraine Gresseau" class="image_equipe">
-          <h3>Loraine Gresseau</h3>
-          <p>Responsable du contenu scientifique</p>
+          <h3>{{ 'about.teamLoraine' | translate }}</h3>
+          <p>{{ 'about.teamLoraineRole' | translate }}</p>
         </div>
       </div>
     </section>

@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import { RouterLink, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { NavController } from '@ionic/angular';
-
+import { TranslatePipe } from '../core/pipes/translate.pipe';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.html',
   styleUrl: './footer.scss',
-  imports: [FormsModule, RouterLink],
+  imports: [FormsModule, RouterLink, TranslatePipe],
 })
 export class FooterComponent   {
 

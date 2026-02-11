@@ -1,6 +1,6 @@
 <ion-header class="modal-header-bar">
   <ion-toolbar>
-    <ion-title class="modal-title">{{ doc?.title }}</ion-title>
+    <ion-title class="modal-title">{{ (doc ? ('doc.' + doc.id + '.title') : '') | translate }}</ion-title>
     <ion-buttons slot="end">
       <ion-button class="modal-close-btn" (click)="close()" (keydown.enter)="close()" fill="clear" shape="round">×</ion-button>
     </ion-buttons>
@@ -8,16 +8,16 @@
 </ion-header>
 <div class="modal-body" *ngIf="doc">
   <div class="modal-image-section slideshow-container">
-    <button type="button" class="slideshow-arrow slideshow-arrow-prev" aria-label="Image précédente"
+    <button type="button" class="slideshow-arrow slideshow-arrow-prev" [attr.aria-label]="'modal.previousImage' | translate"
       *ngIf="canGoPrev" (click)="prevSlide()">
       <span aria-hidden="true">‹</span>
     </button>
     <div class="modal-image-frame slideshow-image-clickable" role="button" tabindex="0" (click)="openLightbox()"
       (keydown.enter)="openLightbox()" (keydown.space)="openLightbox()"
-      [attr.aria-label]="'Agrandir l\'image'">
-      <img [src]="currentImage" [alt]="doc.title" class="modal-image">
+      [attr.aria-label]="'modal.enlargeImage' | translate">
+      <img [src]="currentImage" [alt]="('doc.' + doc.id + '.title') | translate" class="modal-image">
     </div>
-    <button type="button" class="slideshow-arrow slideshow-arrow-next" aria-label="Image suivante"
+    <button type="button" class="slideshow-arrow slideshow-arrow-next" [attr.aria-label]="'modal.nextImage' | translate"
       *ngIf="canGoNext" (click)="nextSlide()">
       <span aria-hidden="true">›</span>
     </button>
@@ -30,8 +30,8 @@
   <div class="modal-content">
     <div class="modal-details">
       <p class="modal-price">{{ doc.price | number:'1.2-2' }} $</p>
-      <ion-button class="modal-buy-btn" shape="round" href="{{ doc.link }}" target="_blank" rel="noopener">Acheter</ion-button>
-      <p class="modal-description">{{ doc.description }}</p>
+      <ion-button class="modal-buy-btn" shape="round" href="{{ doc.link }}" target="_blank" rel="noopener">{{ 'modal.buy' | translate }}</ion-button>
+      <p class="modal-description">{{ ('doc.' + doc.id + '.description') | translate }}</p>
     </div>
   </div>
 </div>

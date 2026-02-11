@@ -11,10 +11,10 @@
       <div >
         <div id="footer_gros_ecrans" class="large-screen-links d-none d-md-flex" style="display: flex; justify-content: space-around; gap: 3rem;">
           <div class="column" style="display: flex; flex-direction: column; gap: 1.5rem;">
-            <a class="nav-link" [routerLink]="['/home']" style="color: #dbe4ee; font-size: 2vw; text-decoration: none;">Accueil</a>
-            <a class="nav-link" [routerLink]="['/notes']" style="color: #dbe4ee; font-size: 2vw; text-decoration: none;">Nos documents</a>
-            <a class="nav-link" [routerLink]="['/about-us']" style="color: #dbe4ee; font-size: 2vw; text-decoration: none;">&Agrave; propos de nous</a>
-            <a class="nav-link" [routerLink]="['/contact']" style="color: #dbe4ee; font-size: 2vw; text-decoration: none;">Nous joindre</a>
+            <a class="nav-link" [routerLink]="['/home']" style="color: #dbe4ee; font-size: 2vw; text-decoration: none;">{{ 'footer.home' | translate }}</a>
+            <a class="nav-link" [routerLink]="['/notes']" style="color: #dbe4ee; font-size: 2vw; text-decoration: none;">{{ 'footer.documents' | translate }}</a>
+            <a class="nav-link" [routerLink]="['/about-us']" style="color: #dbe4ee; font-size: 2vw; text-decoration: none;">{{ 'footer.aboutUs' | translate }}</a>
+            <a class="nav-link" [routerLink]="['/contact']" style="color: #dbe4ee; font-size: 2vw; text-decoration: none;">{{ 'footer.contact' | translate }}</a>
           </div>
           <div class="column">
 
@@ -134,10 +134,10 @@
         <!-- Separation enter footer pour petits ecrans et gros ecrans  -->
 
         <div id="footer_petits_ecrans">
-          <a class="nav-link" [routerLink]="['/home']" style="color: #dbe4ee;  font-size: 2vw ">Accueil</a>
-          <a class="nav-link" [routerLink]="['/notes']" style="color: #dbe4ee; font-size: 2vw !important;">Nos documents</a>
-          <a class="nav-link" [routerLink]="['/about-us']" style="color: #dbe4ee; font-size: 2vw !important;">&Agrave; propos de nous</a>
-          <a class="nav-link" [routerLink]="['/contact']" style="color: #dbe4ee; font-size: 2vw !important;">Nous joindre</a>
+          <a class="nav-link" [routerLink]="['/home']" style="color: #dbe4ee;  font-size: 2vw ">{{ 'footer.home' | translate }}</a>
+          <a class="nav-link" [routerLink]="['/notes']" style="color: #dbe4ee; font-size: 2vw !important;">{{ 'footer.documents' | translate }}</a>
+          <a class="nav-link" [routerLink]="['/about-us']" style="color: #dbe4ee; font-size: 2vw !important;">{{ 'footer.aboutUs' | translate }}</a>
+          <a class="nav-link" [routerLink]="['/contact']" style="color: #dbe4ee; font-size: 2vw !important;">{{ 'footer.contact' | translate }}</a>
 
 
           <div class="row">
@@ -260,8 +260,7 @@
     </footer>
   </div>
   <p class="texte_bas_page" style="margin-top: auto; text-align: center; padding: 1rem; width: 100%;">
-      Groupe Scidemia S.E.N.C. n'est affili&eacute; &agrave; aucun coll&egrave;ge ou
-      universit&eacute;. 2026 Scidemia. Tous droits r&eacute;serv&eacute;s
+      {{ 'footer.copyright' | translate }}
   </p>
 
 </section>

@@ -4,6 +4,7 @@ import { NavigationBar } from '../navigation-bar/navigation-bar';
 import { IonContent, IonInput, IonItem, IonText, IonTextarea, IonButton } from "@ionic/angular/standalone";
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { TranslatePipe } from '../core/pipes/translate.pipe';
 import { HttpClient } from '@angular/common/http';
 import emailjs from '@emailjs/browser';
 
@@ -19,7 +20,7 @@ const TOXICITY_THRESHOLD = 0.7;
 
 @Component({
   selector: 'app-contact',
-  imports: [IonContent, IonInput, IonItem, IonText, IonTextarea, IonButton, NavigationBar, FooterComponent, ReactiveFormsModule, CommonModule],
+  imports: [IonContent, IonInput, IonItem, IonText, IonTextarea, IonButton, NavigationBar, FooterComponent, ReactiveFormsModule, CommonModule, TranslatePipe],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })

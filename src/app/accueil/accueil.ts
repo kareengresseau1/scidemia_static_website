@@ -6,10 +6,11 @@ import { RouterLink } from '@angular/router';
 import { Router } from "@angular/router";
 import { FooterComponent } from "../footer/footer";
 import { NavigationBar } from '../navigation-bar/navigation-bar';
+import { TranslatePipe } from '../core/pipes/translate.pipe';
 
 @Component({
   selector: 'app-accueil',
-  imports: [IonSearchbar, IonButtons, IonButton, IonHeader, IonToolbar, IonTitle, IonContent, RouterLink, FooterComponent, NavigationBar],
+  imports: [IonSearchbar, IonButtons, IonButton, IonHeader, IonToolbar, IonTitle, IonContent, RouterLink, FooterComponent, NavigationBar, TranslatePipe],
   templateUrl: './accueil.html',
   styleUrl: './accueil.scss',
 })

@@ -5,6 +5,7 @@ import { ModalController } from '@ionic/angular/standalone';
 import { FooterComponent } from '../footer/footer';
 import { CommonModule } from '@angular/common';
 import { DocumentModalComponent } from './document-modal/document-modal';
+import { TranslatePipe } from '../core/pipes/translate.pipe';
 
 export interface DocumentInfo {
   id: string;
@@ -18,7 +19,7 @@ export interface DocumentInfo {
 
 @Component({
   selector: 'app-notes',
-  imports: [IonContent, NavigationBar, FooterComponent, CommonModule],
+  imports: [IonContent, NavigationBar, FooterComponent, CommonModule, TranslatePipe],
   templateUrl: './notes.html',
   styleUrl: './notes.scss',
 })

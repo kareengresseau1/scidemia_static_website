@@ -8,6 +8,7 @@ import {
   IonTitle,
   IonContent,
 } from '@ionic/angular/standalone';
+import { TranslatePipe } from './core/pipes/translate.pipe';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +20,7 @@ import {
     IonToolbar,
     IonTitle,
     IonContent,
+    TranslatePipe,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

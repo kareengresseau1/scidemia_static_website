@@ -3,6 +3,8 @@ import { NavController, PopoverController } from '@ionic/angular';
 import { RouterLink, RouterLinkActive, Router } from '@angular/router';
 import { addIcons } from 'ionicons';
 import { CommonModule } from '@angular/common';
+import { TranslationService } from '../core/services/translation.service';
+import type { Lang } from '../core/translations/translations';
 import {
   IonHeader,
   IonContent,
@@ -59,11 +61,16 @@ import {
   providers: [PopoverController],
 })
 export class NavigationBar {
+  get currentLang(): Lang {
+    return this.translation.currentLang;
+  }
+
   constructor(
     private router: Router,
     private navCtrl: NavController,
     private popoverController: PopoverController,
-    private menuCtrl: MenuController
+    private menuCtrl: MenuController,
+    private translation: TranslationService
   ) {
     addIcons({
       personOutline,
@@ -77,5 +84,9 @@ export class NavigationBar {
       cartOutline,
       trashBin
     });
+  }
+
+  setLang(lang: Lang): void {
+    this.translation.setLanguage(lang);
   }
 }

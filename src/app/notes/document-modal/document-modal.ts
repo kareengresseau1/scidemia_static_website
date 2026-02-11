@@ -3,11 +3,12 @@ import { IonHeader, IonToolbar, IonTitle, IonButtons, IonButton, ModalController
 import { CommonModule } from '@angular/common';
 import type { DocumentInfo } from '../notes';
 import { RouterLink } from '@angular/router';
+import { TranslatePipe } from '../../core/pipes/translate.pipe';
 
 @Component({
   selector: 'app-document-modal',
   standalone: true,
-  imports: [IonHeader, IonToolbar, IonTitle, IonButtons, IonButton, CommonModule, RouterLink],
+  imports: [IonHeader, IonToolbar, IonTitle, IonButtons, IonButton, CommonModule, RouterLink, TranslatePipe],
   templateUrl: './document-modal.html',
   styleUrl: './document-modal.scss',
 })

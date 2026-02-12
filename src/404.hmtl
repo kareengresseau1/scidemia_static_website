@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Scidemia</title>
+  <script>
+    // Redirige vers index.html avec le chemin complet
+    var path = window.location.pathname;
+    window.location.href = '/index.html' + '?path=' + encodeURIComponent(path);
+  </script>
+</head>
+<body>
+  <p>Redirection...</p>
+</body>
+</html>

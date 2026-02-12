@@ -4,6 +4,18 @@
   <meta charset="utf-8">
   <title>Scidemia</title>
   <base href="/">
+  <script>
+    (function() {
+      // Récupère le chemin depuis l'URL
+      var urlParams = new URLSearchParams(window.location.search);
+      var path = urlParams.get('path');
+
+      // Si on vient du 404.html, restaure le chemin
+      if (path && path !== window.location.pathname) {
+        history.replaceState(null, null, decodeURIComponent(path));
+      }
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>

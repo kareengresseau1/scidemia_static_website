@@ -27,10 +27,17 @@ jobs:
 
       - name: Build
         run: npx ng build --output-path dist --base-href /
+      - name: Add .nojekyll
+        run: touch ./dist/browser/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/scidemia_static_website/browser
+          publish_dir: ./dist/browser
+          keep_files: false
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
           publish_branch: gh-pages
+
+

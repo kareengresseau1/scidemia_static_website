@@ -4,11 +4,12 @@ import { CommonModule } from '@angular/common';
 import type { DocumentInfo } from '../notes';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '../../core/pipes/translate.pipe';
+import { DocTextPipe } from '../../core/pipes/doc-text.pipe';
 
 @Component({
   selector: 'app-document-modal',
   standalone: true,
-  imports: [IonHeader, IonToolbar, IonTitle, IonButtons, IonButton, CommonModule, RouterLink, TranslatePipe],
+  imports: [IonHeader, IonToolbar, IonTitle, IonButtons, IonButton, CommonModule, RouterLink, TranslatePipe, DocTextPipe],
   templateUrl: './document-modal.html',
   styleUrl: './document-modal.scss',
 })

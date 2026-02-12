@@ -1,6 +1,6 @@
 <ion-header class="modal-header-bar">
   <ion-toolbar>
-    <ion-title class="modal-title">{{ (doc ? ('doc.' + doc.id + '.title') : '') | translate }}</ion-title>
+    <ion-title class="modal-title">{{ doc | docText:'title' }}</ion-title>
     <ion-buttons slot="end">
       <ion-button class="modal-close-btn" (click)="close()" (keydown.enter)="close()" fill="clear" shape="round">×</ion-button>
     </ion-buttons>
@@ -15,7 +15,7 @@
     <div class="modal-image-frame slideshow-image-clickable" role="button" tabindex="0" (click)="openLightbox()"
       (keydown.enter)="openLightbox()" (keydown.space)="openLightbox()"
       [attr.aria-label]="'modal.enlargeImage' | translate">
-      <img [src]="currentImage" [alt]="('doc.' + doc.id + '.title') | translate" class="modal-image">
+      <img [src]="currentImage" [alt]="doc | docText:'title'" class="modal-image">
     </div>
     <button type="button" class="slideshow-arrow slideshow-arrow-next" [attr.aria-label]="'modal.nextImage' | translate"
       *ngIf="canGoNext" (click)="nextSlide()">
@@ -30,8 +30,9 @@
   <div class="modal-content">
     <div class="modal-details">
       <p class="modal-price">{{ doc.price | number:'1.2-2' }} $</p>
-      <ion-button class="modal-buy-btn" shape="round" href="{{ doc.link }}" target="_blank" rel="noopener">{{ 'modal.buy' | translate }}</ion-button>
-      <p class="modal-description">{{ ('doc.' + doc.id + '.description') | translate }}</p>
+      <!-- Buy button hidden for compsci (coming soon) -->
+      <ion-button *ngIf="doc.id !== 'compsci'" class="modal-buy-btn" shape="round" href="{{ doc.link }}" target="_blank" rel="noopener">{{ 'modal.buy' | translate }}</ion-button>
+      <p class="modal-description">{{ doc | docText:'description' }}</p>
     </div>
   </div>
 </div>

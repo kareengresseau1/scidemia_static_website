@@ -38,6 +38,21 @@ p{
   color: #dbe4ee
 }
 
+/* Footer top row: logo; on small screen, logo + social on same row */
+.footer_top_row {
+  display: block;
+}
+
+.footer_top_row .footer_logo {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+}
+
+.footer_social_small {
+  display: none;
+}
+
 /* Code CSS pour le bouton qui sert a se connecter*/
 
 #div_bouton_connexion{
@@ -386,16 +401,75 @@ p{
   opacity: 0.8;
 }
 
+/* Show large-screen footer only from 768px up; show small-screen footer only below 768px */
 @media (min-width: 768px) {
-  #footer_petits_ecrans{
-    display: none;
+  #footer_gros_ecrans {
+    display: flex;
   }
-
+  #footer_petits_ecrans {
+    display: none !important;
+  }
 }
 
 @media (max-width: 767px) {
-  #footer_gros_ecrans{
-    display: none;
+  #footer_gros_ecrans {
+    display: none !important;
+  }
+
+  /* Top row: Scidemia logo + social icons on same level */
+  .footer_top_row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .footer_social_small {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .footer_social_small .nav-link {
+    color: #dbe4ee;
+    padding: 0.25rem;
+  }
+
+  /* Hide the duplicate social block inside footer_petits_ecrans */
+  #footer_petits_ecrans .footer_petits_ecrans_social {
+    display: none !important;
+  }
+
+  #footer_petits_ecrans {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  #footer_petits_ecrans .footer_petits_ecrans_links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.75rem;
+    width: 100%;
+  }
+
+  #footer_petits_ecrans .footer_petits_ecrans_links .nav-link {
+    color: #dbe4ee !important;
+    font-size: 1.125rem;
+    text-decoration: none;
+    display: block;
+    transition: color 0.2s ease;
+  }
+
+  #footer_petits_ecrans .footer_petits_ecrans_links .nav-link:hover {
+    color: #F17300 !important;
   }
 }
 

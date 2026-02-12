@@ -71,12 +71,6 @@ export const translations: Record<Lang, Record<string, string>> = {
     // Notes
     'notes.title': 'Nos documents',
 
-    // Document content (notes page + modal)
-    'doc.chemistry.title': 'Cahier de notes de chimie organique',
-    'doc.chemistry.description': 'Ce cahier est utile pour dessiner et visualiser les molécules organiques ainsi que les réactions chimiques. Idéal pour le domaine de la chimie organique. Utilisez le cahier pour compléter tes notes de cours.',
-    'doc.compsci.title': 'Cahier de notes en programmation informatique',
-    'doc.compsci.description': 'Ce cahier de programmation informatique permet de pratiquer les bases de la programmation en ecrivant du pseudocode, les structures de données, les algorithmes et dessiner des circuits logiques, etc. Conçu pour les débutants et les étudiants en informatique. Utilisez le cahier pour compléter tes notes de cours.',
-
     // Document modal
     'modal.buy': 'Acheter',
     'modal.previousImage': 'Image précédente',
@@ -152,12 +146,6 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // Notes
     'notes.title': 'Our documents',
-
-    // Document content (notes page + modal)
-    'doc.chemistry.title': 'Organic chemistry note-taking notebook',
-    'doc.chemistry.description': 'This notebook is useful for drawing and visualizing organic molecules and chemical reactions. Ideal for organic chemistry. Use the notebook to complete your course notes.',
-    'doc.compsci.title': 'Computer programming note-taking notebook',
-    'doc.compsci.description': 'This computer programming notebook lets you practice programming basics by writing pseudocode, data structures, algorithms, and drawing logic circuits, etc. Designed for beginners and computer science students. Use the notebook to complete your course notes.',
 
     // Document modal
     'modal.buy': 'Buy',

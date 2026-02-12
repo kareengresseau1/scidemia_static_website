@@ -10,10 +10,10 @@
         <div *ngFor="let doc of documents" class="document-card-wrapper">
           <button type="button" class="document-card" (click)="openModal(doc)">
             <div class="document-card-image-wrap">
-              <img [src]="doc.image" [alt]="('doc.' + doc.id + '.title') | translate" class="document-card-image">
+              <img [src]="doc.image" [alt]="doc | docText:'title'" class="document-card-image">
             </div>
             <div class="document-card-info">
-              <h3 class="document-card-title">{{ ('doc.' + doc.id + '.title') | translate }}</h3>
+              <h3 class="document-card-title">{{ doc | docText:'title' }}</h3>
               <p class="document-card-price">{{ doc.price }} $</p>
             </div>
           </button>

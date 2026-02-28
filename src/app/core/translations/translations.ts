@@ -20,7 +20,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     'accueil.heroSubtitle': 'Notes de cours faits par des étudiants, conçus pour des étudiants',
     'accueil.missionTitle': 'Notre mission',
     'accueil.missionStatement': "Notre mission est de faciliter le temps d'études de chacun afin de contribuer à leur réussite.",
-    'accueil.servicesTitle': 'Notre services',
+    'accueil.servicesTitle': 'Notre service',
     'accueil.serviceNote': "Trouve des cahiers de prise de notes pour t'aider à étudier plus efficacement.",
     'accueil.documentsBtn': 'Nos documents',
 

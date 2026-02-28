@@ -21,12 +21,12 @@ export const translations: Record<Lang, Record<string, string>> = {
     'accueil.missionTitle': 'Notre mission',
     'accueil.missionStatement': "Notre mission est de faciliter le temps d'études de chacun afin de contribuer à leur réussite.",
     'accueil.servicesTitle': 'Notre services',
-    'accueil.serviceNote': "Trouve des cahiers de prise de notes pour t'aider à mieux et plus rapidement à prendre des notes.",
+    'accueil.serviceNote': "Trouve des cahiers de prise de notes pour t'aider à étudier plus efficacement.",
     'accueil.documentsBtn': 'Nos documents',
 
     // About us
     'about.title': 'À propos de nous',
-    'about.subtitle': "Scidemia est une plateforme offrant des cahiers de prise de notes pour t'aider à mieux et plus rapidement à prendre des notes.",
+    'about.subtitle': "Scidemia est une plateforme offrant des cahiers de prise de notes pour t'aider à étudier plus efficacement.",
     'about.tagline': "Que tu sois en première année de CÉGEP ou sur le point de terminer ton baccalauréat, Scidemia offre une variété de documents pouvant rendre ta session d'études plus facile.",
     'about.buyAdvantagesTitle': "Avantages d'acheter des cahies de notes",
     'about.advantage1Title': 'Permet de sauver du temps',

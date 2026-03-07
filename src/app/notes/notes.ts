@@ -46,15 +46,15 @@ export class Notes {
     {
       id: 'compsci',
       price: 16.99,
-      title: 'Cahier de notes en programmation informatique (bientôt en vente)',
-      titleEn: 'Computer programming note-taking notebook (coming soon)',
+      title: 'Cahier de notes en programmation informatique',
+      titleEn: 'Computer programming note-taking notebook',
       image: '/assets/images/screenshots_documents/cover_notebook_compsci.png',
       images: [
         '/assets/images/screenshots_documents/cover_notebook_compsci.png',
         '/assets/images/screenshots_documents/content_notebook_compsci.png',
         '/assets/images/screenshots_documents/example_notebook_compsci.png',
       ],
-      link: 'https://www.amazon.ca/Cahier-programmation-informatique-Loraine-Gresseau/dp/B0GLFPGH3L/ref=sr_1_1?crid=LAIALBJ54W3I&dib=eyJ2IjoiMSJ9.E2fnmwfHLZh_iGBwTZQlUP96zEqvMT51fd-pzYQ8AKIUwqQKXBytSPAj9lLrVjE0K1_WbSY_NT4BIayW9nwXlxFanOOTpz6FJqe8GLgBnTeA5a04K0KYEFAtREYuHKosq9mScqdqiKATJSF-WrWv3p58yQVjywRQTqqntrPo8ddHuZy6Inu5rxS1um1QKbtRl1-X51sV-Ko5DTpbqKyIJftTbvjb0NYrL7TbwgFGTeA.XLUdIV2Iq6snGTRCKc2Az7NxQ6m3ZsMixzj7c4j5OSY&dib_tag=se&keywords=cahier+de+notes+de+programmation+informatique&qid=1770776451&s=books&sprefix=cahier+de+notes+de+programmation+informatique%2Cstripbooks%2C239&sr=1-1',
+      link: 'https://www.amazon.ca/gp/product/B0GQXB3VG7/ref=ox_sc_act_title_1?smid=A3DWYIK6Y9EEQB&psc=1',
       description: 'Ce cahier de programmation informatique permet de pratiquer les bases de la programmation en ecrivant du pseudocode, les structures de données, les algorithmes et dessiner des circuits logiques, etc. Conçu pour les débutants et les étudiants en informatique. Utilises le cahier pour compléter tes notes de cours.',
       descriptionEn: 'This computer programming notebook lets you practice programming basics by writing pseudocode, data structures, algorithms, and drawing logic circuits, etc. Designed for beginners and computer science students. Use the notebook to complete your course notes.',
     },

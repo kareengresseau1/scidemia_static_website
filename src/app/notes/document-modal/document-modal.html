@@ -31,7 +31,7 @@
     <div class="modal-details">
       <p class="modal-price">{{ doc.price | number:'1.2-2' }} $</p>
       <!-- Buy button hidden for compsci (coming soon) -->
-      <ion-button *ngIf="doc.id !== 'compsci'" class="modal-buy-btn" shape="round" href="{{ doc.link }}" target="_blank" rel="noopener">{{ 'modal.buy' | translate }}</ion-button>
+      <ion-button class="modal-buy-btn" shape="round" href="{{ doc.link }}" target="_blank" rel="noopener">{{ 'modal.buy' | translate }}</ion-button>
       <p class="modal-description">{{ doc | docText:'description' }}</p>
     </div>
   </div>

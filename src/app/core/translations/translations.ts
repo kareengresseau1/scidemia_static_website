@@ -44,11 +44,11 @@ export const translations: Record<Lang, Record<string, string>> = {
     'about.sell3Title': 'Commence à gagner dès maintenant',
     'about.sell3Desc': "Une fois tes documents publiés, ils deviennent accessibles à une vaste audience prête à acheter. Plus tes documents sont téléchargés, plus tes gains augmentent.",
     'about.teamTitle': 'Notre équipe',
-    'about.teamAlex': 'Alex Gresseau',
+    'about.teamAlex': 'Alex Gresseau, MBA',
     'about.teamAlexRole': 'Responsable en marketing et communication',
-    'about.teamKareen': 'Kareen Gresseau',
+    'about.teamKareen': 'Kareen Gresseau, BSc',
     'about.teamKareenRole': 'Support technique et développement web',
-    'about.teamLoraine': 'Loraine Gresseau',
+    'about.teamLoraine': 'Loraine Gresseau, MSc',
     'about.teamLoraineRole': 'Responsable du contenu scientifique',
 
     // Contact

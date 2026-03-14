@@ -29,9 +29,11 @@
   </div>
   <div class="modal-content">
     <div class="modal-details">
-      <p class="modal-price">{{ doc.price | number:'1.2-2' }} $</p>
-      <!-- Buy button hidden for compsci (coming soon) -->
-      <ion-button class="modal-buy-btn" shape="round" href="{{ doc.link }}" target="_blank" rel="noopener">{{ 'modal.buy' | translate }}</ion-button>
+      <ng-container *ngIf="!doc.availableSoon">
+        <p class="modal-price">{{ doc.price | number:'1.2-2' }} $</p>
+        <ion-button class="modal-buy-btn" shape="round" href="{{ doc.link }}" target="_blank" rel="noopener">{{ 'modal.buy' | translate }}</ion-button>
+      </ng-container>
+      <p class="modal-available-soon" *ngIf="doc.availableSoon">{{ 'modal.availableSoon' | translate }}</p>
       <p class="modal-description">{{ doc | docText:'description' }}</p>
     </div>
   </div>

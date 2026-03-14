@@ -73,6 +73,7 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // Document modal
     'modal.buy': 'Acheter',
+    'modal.availableSoon': 'Disponible bientôt',
     'modal.previousImage': 'Image précédente',
     'modal.nextImage': 'Image suivante',
     'modal.enlargeImage': "Agrandir l'image",
@@ -149,6 +150,7 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // Document modal
     'modal.buy': 'Buy',
+    'modal.availableSoon': 'Available soon',
     'modal.previousImage': 'Previous image',
     'modal.nextImage': 'Next image',
     'modal.enlargeImage': 'Enlarge image',

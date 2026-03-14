@@ -26,7 +26,7 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // About us
     'about.title': 'À propos de nous',
-    'about.subtitle': "Scidemia est une plateforme offrant des cahiers de prise de notes pour t'aider à étudier plus efficacement.",
+    'about.subtitle': "Scidemia est une plateforme offrant des cahiers de prise de notes en sciences et technologies pour t'aider à étudier plus efficacement.",
     'about.tagline': "Que tu sois en première année de CÉGEP ou sur le point de terminer ton baccalauréat, Scidemia offre une variété de documents pouvant rendre ta session d'études plus facile.",
     'about.buyAdvantagesTitle': "Avantages d'acheter des cahies de notes",
     'about.advantage1Title': 'Permet de sauver du temps',
@@ -103,7 +103,7 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // About us
     'about.title': 'About us',
-    'about.subtitle': 'Scidemia is a platform offering note-taking notebooks to help you take better and faster notes.',
+    'about.subtitle': 'Scidemia is a platform offering note-taking notebooks in science and technology to help you take better and faster notes.',
     'about.tagline': 'Whether you\'re in your first year of CEGEP or about to finish your bachelor\'s degree, Scidemia offers a variety of documents to make your study session easier.',
     'about.buyAdvantagesTitle': 'Benefits of buying note notebooks',
     'about.advantage1Title': 'Saves time',
@@ -121,11 +121,11 @@ export const translations: Record<Lang, Record<string, string>> = {
     'about.sell3Title': 'Start earning now',
     'about.sell3Desc': 'Once your documents are published, they become available to a wide audience ready to buy. The more your documents are downloaded, the more you earn.',
     'about.teamTitle': 'Our team',
-    'about.teamAlex': 'Alex Gresseau',
+    'about.teamAlex': 'Alex Gresseau, MBA',
     'about.teamAlexRole': 'Marketing and communications lead',
-    'about.teamKareen': 'Kareen Gresseau',
+    'about.teamKareen': 'Kareen Gresseau, BSc',
     'about.teamKareenRole': 'Technical support and web development',
-    'about.teamLoraine': 'Loraine Gresseau',
+    'about.teamLoraine': 'Loraine Gresseau, MSc',
     'about.teamLoraineRole': 'Scientific content lead',
 
     // Contact

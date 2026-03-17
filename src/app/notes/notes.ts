@@ -59,7 +59,6 @@ export class Notes {
       link: 'https://www.amazon.ca/gp/product/B0GQXB3VG7/ref=ox_sc_act_title_1?smid=A3DWYIK6Y9EEQB&psc=1',
       description: 'Ce cahier de programmation informatique permet de pratiquer les bases de la programmation en ecrivant du pseudocode, les structures de données, les algorithmes et dessiner des circuits logiques, etc. Conçu pour les débutants et les étudiants en informatique. Utilises le cahier pour compléter tes notes de cours.',
       descriptionEn: 'This computer programming notebook lets you practice programming basics by writing pseudocode, data structures, algorithms, and drawing logic circuits, etc. Designed for beginners and computer science students. Use the notebook to complete your course notes.',
-      availableSoon: true,
     },
   ];
 

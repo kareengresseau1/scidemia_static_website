@@ -3,6 +3,7 @@ export type Lang = 'fr' | 'en';
 export const translations: Record<Lang, Record<string, string>> = {
   fr: {
     // Nav / sidebar
+    //dummy comment for debugging
     'nav.home': 'Accueil',
     'nav.documents': 'Nos documents',
     'nav.aboutUs': 'À propos de nous',

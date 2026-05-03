@@ -3,7 +3,6 @@ export type Lang = 'fr' | 'en';
 export const translations: Record<Lang, Record<string, string>> = {
   fr: {
     // Nav / sidebar
-    //dummy comment for debugging
     'nav.home': 'Accueil',
     'nav.documents': 'Nos documents',
     'nav.aboutUs': 'À propos de nous',
@@ -29,7 +28,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     'about.title': 'À propos de nous',
     'about.subtitle': "Scidemia est une plateforme offrant des cahiers de prise de notes en sciences et technologies pour t'aider à étudier plus efficacement.",
     'about.tagline': "Que tu sois en première année de CÉGEP ou sur le point de terminer ton baccalauréat, Scidemia offre une variété de documents pouvant rendre ta session d'études plus facile.",
-    'about.buyAdvantagesTitle': "Avantages d'acheter des cahies de notes",
+    'about.buyAdvantagesTitle': "Avantages d'acheter des cahiers de notes",
     'about.advantage1Title': 'Permet de sauver du temps',
     'about.advantage1Desc': "Si tu as besoin de faire des notes détaillées pour un cours, les documents de notes de cours te permettront de gagner du temps et de mieux comprendre le cours.",
     'about.advantage2Title': 'Compléter tes notes de cours en ta possession',
